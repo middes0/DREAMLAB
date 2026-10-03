@@ -417,7 +417,7 @@
       save();
     });
 
-    document.addEventListener("keydown", hotkeys, { once: true });
+    document.onkeydown = hotkeys;
   }
 
   function hotkeys(event) {
@@ -437,7 +437,6 @@
       duplicateElement();
       return;
     }
-    document.addEventListener("keydown", hotkeys, { once: true });
   }
 
   function addElement(type) {
